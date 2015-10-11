@@ -36,6 +36,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -368,21 +369,9 @@ public class UIUtils {
 
     @TargetApi(21)
     public static void resetStatusBar(@NonNull Activity argActivity, @Nullable Resources.Theme argTheme) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-            Window window = argActivity.getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            int color;
-            @ColorRes int colorRes = R.color.colorPrimary;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                color = argActivity.getResources().getColor(colorRes, argTheme);
-            } else {
-                color = argActivity.getResources().getColor(colorRes);
-            }
-            int r = Color.red(color);
-            int g = Color.green(color);
-            int b = Color.blue(color);
-            int opaqueColor = Color.argb(255, r, g ,b);
-            window.setStatusBarColor(opaqueColor);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            int color = ContextCompat.getColor(argActivity, R.color.colorPrimaryDark);
+            tintStatusBar(color, argActivity);
         }
     }
 
