@@ -367,12 +367,9 @@ public class UIUtils {
         }
     }
 
-    @TargetApi(21)
-    public static void resetStatusBar(@NonNull Activity argActivity, @Nullable Resources.Theme argTheme) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            int color = ContextCompat.getColor(argActivity, R.color.colorPrimaryDark);
-            tintStatusBar(color, argActivity);
-        }
+    public static void resetStatusBar(@NonNull Activity argActivity) {
+        int color = ContextCompat.getColor(argActivity, R.color.colorPrimaryDark);
+        tintStatusBar(color, argActivity);
     }
 
 

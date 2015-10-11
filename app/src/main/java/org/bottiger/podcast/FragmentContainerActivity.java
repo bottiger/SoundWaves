@@ -200,7 +200,7 @@ public class FragmentContainerActivity extends DrawerActivity {
                 }
 
                 if (!HasTinted) {
-                    UIUtils.resetStatusBar(activity, null);
+                    UIUtils.resetStatusBar(activity);
                 }
             }
             super.setPrimaryItem(container, position, object);
