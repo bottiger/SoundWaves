@@ -71,7 +71,7 @@
         <item name="android:windowTranslucentStatus" tools:targetApi="19">true</item> <!- top statusbar ->
         -->
 
-        <item name="android:statusBarColor" tools:targetApi="21">@color/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/colorPrimaryDark</item>
 
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
@@ -253,7 +253,7 @@
     <style name="TransparentActionBar" parent="ActionBar">
         <!--<item name="android:background">@null</item>-->
         <item name="android:height">@dimen/action_bar_height</item>
-        <item name="android:background">@color/colorPrimaryDark</item> <!-- same as statusbar -->
+        <item name="android:background">@color/colorPrimary</item> <!-- same as statusbar -->
     </style>
 
     <style name="TranslucentActionBar" parent="ActionBar">
