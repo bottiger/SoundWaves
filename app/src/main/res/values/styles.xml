@@ -58,8 +58,8 @@
         <!--<item name="android:colorBackground">@color/white_opaque</item>-->
 
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorSecondary</item>
-        <item name="colorAccent">@color/colorSecondary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
 
         <!--
         They are here because 4.1.2 will crash otherwise
