@@ -103,7 +103,7 @@ public abstract class DrawerActivity extends MediaRouterPlaybackActivity impleme
     }
 
     public void exitFullScreen(@NonNull View argFullScreenView) {
-        UIUtils.resetStatusBar(this, null);
+        UIUtils.resetStatusBar(this);
     }
 
     public int getFragmentTop() {
